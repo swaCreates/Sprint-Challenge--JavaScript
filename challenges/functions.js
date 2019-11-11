@@ -17,12 +17,12 @@ const consume= function(a, b, cb){
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-const add= function(num1, num2){
-  return num1 + num2;
+const add= function(a, b){
+  return a + b;
 }
 
-const multiply= function(num1, num2){
-  return num1 * num2;
+const multiply= function(a, b){
+  return a * b;
 }
 
 const greeting= function(firstName, lastName){
@@ -41,7 +41,7 @@ const greeting= function(firstName, lastName){
 
 // Explanation: 
 
-/* Due to the new functional scope being declared within the myFunction, nestedFunction is able to access the variable outside what it's nested in. */
+/* ---- Due to the new functional scope being declared within the myFunction, nestedFunction is able to access the variable outside what it's nested in. ---- */
 
 
 const external = "I'm outside the function";

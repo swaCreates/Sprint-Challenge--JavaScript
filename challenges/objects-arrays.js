@@ -93,10 +93,24 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+for(let i= 0; i < graduates.length; i++){
+  const newArr= [];
+  newArr.push(`${graduates[i].first_name} ${graduates[i].email}`);
+  
+  contactInfo.push(newArr);
+}
+
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+graduates.forEach(function(arr){
+  if(arr.university.includes("Uni")) {
+    unisWithUni.push(arr.university);
+    return unisWithUni;
+  }
+})
+
 console.log(unisWithUni);
 
 
@@ -123,6 +137,11 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+
+zooAnimals.forEach(item => {
+  displayNames.push(`${item.animal_name}, ${item.scientific_name}`);
+})
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -132,6 +151,12 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+
+zooAnimals.map(item => {
+  const lowerCase= `${item.animal_name}`;
+  lowCaseAnimalNames.push(lowerCase.toLowerCase());
+})
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
